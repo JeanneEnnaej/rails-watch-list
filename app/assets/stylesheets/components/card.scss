@@ -1,0 +1,30 @@
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .card {
+    background-image: asset-url("list.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 300px;
+    margin-top: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 > a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-family: 'Silkscreen', cursive;
+      font-size: 50px;
+    }
+  }
+
+}

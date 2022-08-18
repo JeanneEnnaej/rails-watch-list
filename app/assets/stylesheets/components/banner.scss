@@ -1,0 +1,17 @@
+
+.banner {
+  background-image: asset-url("movies.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color:white;
+    display: flex;
+    font-family: 'Silkscreen', cursive;
+    font-size: 70px;
+  }
+}

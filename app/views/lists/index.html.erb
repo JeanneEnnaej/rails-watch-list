@@ -1,0 +1,12 @@
+<div class= "banner">
+  <h1>Movies</h1>
+</div>
+
+<div class= "container">
+<% @lists.each do |list| %>
+<div class="card">
+    <h2><%= link_to list.name, list %></h2>
+
+</div>
+<% end %>
+</div>

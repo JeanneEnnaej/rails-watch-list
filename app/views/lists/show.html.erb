@@ -1,0 +1,25 @@
+<div class="listbanner">
+<h1><%= @list.name %></h1>
+</div>
+
+<div class="button">
+<%= link_to 'New movie', new_list_bookmark_path(params[:id]), class: "btn btn-info"  %>
+</div>
+
+<div class="listcontainer">
+<% @list.bookmarks.each do |bookmark|%>
+  <div class="listcard">
+    <p><%= image_tag (bookmark.movie.poster_url), alt: "Le Wagon",  class: "image" %></p>
+    <div class="titre d-flex justify-content-start mx-2">
+      <p><%= bookmark.movie.title %></p>
+      <p><%= bookmark.movie.rating %></p>
+      <i class="fa-solid fa-star"></i>
+    </div>
+    <p><%= bookmark.movie.overview %></p>
+    <div class="d-flex justify-content-between mx-2">
+      <p><i class="fa-solid fa-quote-right"></i><%= bookmark.comment %></p>
+      <%= link_to 'delete', bookmark_path(bookmark) , data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    </div>
+  </div>
+<% end %>
+</div>
